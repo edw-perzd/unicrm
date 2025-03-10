@@ -13,11 +13,12 @@ return new class extends Migration
     {
         Schema::create('alumnos', function (Blueprint $table) {
             $table->id();
+            $table->string('matricula_alumno')->unique();
             $table->string('nombre_alumno');
             $table->string('direccion_alumno');
-            $table->string('telefono1_alumno');
+            $table->string('telefono1_alumno')->unique();
             $table->string('telefono2_alumno')->nullable();
-            $table->string('correoE_alumno')->nullable();
+            $table->string('correoE_alumno')->nullable()->unique();
             $table->date('fNacimiento_alumno');
             $table->string('carrera_alumno');
             $table->tinyInteger('semestre_alumno');
