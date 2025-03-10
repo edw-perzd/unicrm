@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Alumno</title>
-</head>
-<body>
+@extends('layouts.app')
+@section('title', 'Información del alumno')
+@section('content')
     <h2>Información del alumno:</h2>
     <ul>
         <li>Nombre: {{$alumno->nombre_alumno}}</li>
+        <li>Matricula: {{ $alumno->matricula_alumno }}</li>
         <li>Dirección: {{$alumno->direccion_alumno}}</li>
         <li>Teléfono 1: {{$alumno->telefono1_alumno}}</li>
         <li>Teléfono 2: {{$alumno->telefono2_alumno}}</li>
@@ -24,6 +19,5 @@
         <li>Restricciones médicas: {{$alumno->restricMed_alumno}}</li>
         <li>Contacto de emergencia: {{$alumno->contactoMed_alumno}}</li>
     </ul>
-    <a href="{{ route('alumnos.index') }}">Regresar al listado de alumnos</a>
-</body>
-</html>
+    <a href="{{ route('alumnos.index') }}">Ver listado de alumnos</a>
+@endsection
