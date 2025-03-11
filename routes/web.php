@@ -15,7 +15,7 @@ Route::post('/alumnos/buscar/', [AlumnoController::class, 'submit'])->name('alum
 Route::get('/alumnos/buscar/{matricula}', [AlumnoController::class, 'show'])->name('alumnos.show');
 
 Route::get('/alumnos/crear/', [AlumnoController::class, 'create'])->name('alumnos.create');
-Route::post('/alumnos/crear', [AlumnoController::class, 'store'])->name('alumnos.store');
+Route::post('/alumnos/crear/', [AlumnoController::class, 'store'])->name('alumnos.store');
 Route::get('/alumnos/{matricula}/editar', [AlumnoController::class, 'edit'])->name('alumnos.edit');
 Route::put('/alumnos/{matricula}', [AlumnoController::class, 'update'])->name('alumnos.update');
 
