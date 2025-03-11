@@ -65,18 +65,19 @@ class AlumnoController extends Controller
         return view('alumnos.buscar');
     }
 
+    // Procesa la solicitud de búsqueda y redirige a la vista del alumno si es encontrado
     public function submit(Request $request){
+        $matricula = $request->input('matricula');  // Captura la matrícula del formulario
 
-        $matricula = $request->input('matricula');
-        $alumno = Alumno::where('matricula_alumno', $matricula)->first();
+        $alumno = Alumno::where('matricula_alumno', $matricula)->first(); // Busca al alumno por la matrícula
 
         if($alumno){
-            return redirect()->route('alumnos.show', $matricula);
-        }else{
-            return abort(404, 'Este alumno no se encuentra en la base de datos');
+            return redirect()->route('alumnos.show', $matricula);  // Redirige al perfil del alumno
+        } else {
+            return abort(404, 'Este alumno no se encuentra en la base de datos');  // Si no se encuentra al alumno
         }
-
     }
+
     public function show($matricula){
 
         $alumno = Alumno::where('matricula_alumno', $matricula)->first();
