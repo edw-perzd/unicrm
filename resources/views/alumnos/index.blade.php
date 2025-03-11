@@ -36,4 +36,9 @@
             @endforeach
         </tbody>
       </table>
+
+      <form class="" method="POST" action="{{ route('logout') }}">
+        @csrf
+        <button class="dropdown-item" type="submit">Cerrar Sesión</button>
+    </form>
 @endsection
