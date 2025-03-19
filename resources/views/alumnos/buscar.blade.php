@@ -3,9 +3,8 @@
 @section('title', 'Buscar alumno')
 
 @section('content')
-    {{-- Enlace al archivo CSS --}}
-    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/modal.css') }}"> {{-- Agrega los estilos del modal --}}
+
+<link rel="stylesheet" href="{{ asset('css/buscar.css') }}">
     
     <hr class="separator">
 
@@ -28,10 +27,10 @@
         <div class="modal-contenido">
             <span class="cerrar" id="cerrar-modal">&times;</span>
             <h3>Ingrese la matrícula</h3>
-            <form action="{{ route('alumnos.buscar.submit') }}" method="POST">
+            <form action="{{ route('alumnos.buscar.submit') }}" method="POST" class=".form-search">
                 @csrf
-                <input type="text" name="matricula" id="matricula" placeholder="Ingresa la matrícula del alumno" required>
-                <input type="submit" value="Buscar">
+                <input class="input-search" type="text" name="matricula" id="matricula" placeholder="Ingresa la matrícula del alumno" autocomplete="false" required>
+                <input class="input-search" type="submit" value="Buscar">
             </form>
         </div>
     </div>

@@ -2,12 +2,7 @@
 @section('title', 'Listado de alumnos')
 
 @section('content')
-    {{-- Enlace al archivo CSS --}}
-    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     <hr class="separator">
-
-    <!-- Botón para ir a la pantalla de búsqueda -->
-    <a href="{{ route('alumnos.buscar.form') }}" class="btn-buscar">Buscar alumno</a>
 
     <h2>Listado general de alumnos:</h2>
 
@@ -45,9 +40,4 @@
             @endforeach
         </tbody>
       </table>
-
-      <form class="" method="POST" action="{{ route('logout') }}">
-        @csrf
-        <button class="dropdown-item" type="submit">Cerrar Sesión</button>
-    </form>
 @endsection

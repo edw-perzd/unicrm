@@ -4,6 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>@yield('title', 'UNICRM')</title>
+        {{-- Enlace al archivo CSS --}}
+        <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     </head>
     <body>
         <div class="container" style="background-color: #7374e4">

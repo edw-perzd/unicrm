@@ -3,8 +3,7 @@
 @section('title', 'Información del alumno')
 
 @section('content')
-    {{-- Enlace al archivo CSS --}}
-    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+<link rel="stylesheet" href="{{ asset('css/detailsAlumno.css') }}">
     <hr class="separator">
 
     <div class="container">
@@ -29,7 +28,7 @@
                 <li><strong>Contacto de emergencia:</strong> {{$alumno->contactoMed_alumno}}</li>
             </ul>
 
-            <a href="{{ route('alumnos.index') }}">Ver listado de alumnos</a>
+            <a href="{{ route('alumnos.index') }}" class="btn-azul">Ver listado de alumnos</a>
         </div>
 
         <!-- Código QR -->

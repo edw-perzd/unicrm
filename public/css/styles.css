@@ -39,55 +39,10 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 /* =========================== */
-/*        Información del alumno        */
+/*        Botón azul        */
 /* =========================== */
-.info-alumno {
-    width: 60%;
-    text-align: left;
-}
-
-.info-alumno h2 {
-    color: var(--color-dark1);
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    background: var(--color1);
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
-    color: white;
-    font-weight: bold;
-}
-
-/* =========================== */
-/*        QR a la derecha        */
-/* =========================== */
-.qr-container {
-    width: 35%;
-    text-align: center;
-    background: var(--color3);
-    padding: 15px;
-    border-radius: 10px;
-}
-
-.qr-container img {
-    width: 200px;
-    border: 5px solid var(--color-dark3);
-    border-radius: 10px;
-    background: white;
-}
-
-/* =========================== */
-/*        Botón de regreso        */
-/* =========================== */
-a {
+.btn-azul {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
@@ -97,30 +52,8 @@ a {
     border-radius: 5px;
     font-weight: bold;
 }
-
-a:hover {
+.btn-azul:hover {
     background: var(--color-dark4);
-}
-
-/* =========================== */
-/*        Página de búsqueda de alumnos        */
-/* =========================== */
-h2 {
-    color: var(--color-dark1);
-    text-align: center;
-}
-
-p {
-    text-align: center;
-    font-size: 18px;
-    color: var(--color5);
-}
-
-video {
-    display: block;
-    margin: 20px auto;
-    border: 5px solid var(--color3);
-    border-radius: 10px;
 }
 
 /* =========================== */
@@ -132,12 +65,12 @@ video {
     color: var(--color-dark2);
 }
 
-form {
+.form-search {
     text-align: center;
     margin-top: 20px;
 }
 
-input[type="text"] {
+.input-search[type="text"] {
     padding: 10px;
     width: 300px;
     border: 2px solid var(--color3);
@@ -145,7 +78,7 @@ input[type="text"] {
     font-size: 16px;
 }
 
-input[type="submit"] {
+.input-search[type="submit"] {
     background: var(--color-dark2);
     color: white;
     padding: 10px 20px;
@@ -155,7 +88,7 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-input[type="submit"]:hover {
+.input-search[type="submit"]:hover {
     background: var(--color-dark4);
 }
 
@@ -230,35 +163,6 @@ input[type="submit"]:hover {
     margin: 0;
 }
 
-/* =========================== */
-/*        Navbar        */
-/* =========================== */
-.navbar {
-    width: 100%;
-    padding: 0.75rem 1.5rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.navbar .container-fluid {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar-brand {
-    display: flex;
-    align-items: center;
-    color: white;
-}
-
-.navbar-brand img {
-    margin-right: 10px;
-    border-radius: 5px; /* Hace que el logo tenga esquinas redondeadas */
-}
 
 /* =========================== */
 /*        Separador visual        */
@@ -356,6 +260,4 @@ input[type="submit"]:hover {
 #abrir-modal:hover {
     background-color: var(--color4);
 }
-
-
 
