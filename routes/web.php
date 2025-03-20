@@ -12,6 +12,8 @@ Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'authenticate'])->name('login.authenticate');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
+Route::get('/ayuda', function () {return view('alumnos.ayuda');})->name('ayuda');
+
 Route::get('/alumnos', [AlumnoController::class, 'index'])->name('alumnos.index');
 
 Route::get('/alumnos/buscar/', [AlumnoController::class, 'buscar'])->name('alumnos.buscar.form');

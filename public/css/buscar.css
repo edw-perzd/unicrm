@@ -1,6 +1,7 @@
 /* =========================== */
 /*        Página de búsqueda de alumnos        */
 /* =========================== */
+
 h2 {
     color: var(--color-dark1);
     text-align: center;
@@ -17,4 +18,98 @@ video {
     margin: 20px auto;
     border: 5px solid var(--color3);
     border-radius: 10px;
+    max-width: 100%; /* Adaptar video a la pantalla */
+    height: auto;
+}
+
+/* Botón para abrir el modal */
+#abrir-modal {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background: var(--color3);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Estilo del Modal */
+.modal {
+    display: none; /* Ocultar por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    overflow: auto; /* Desplazamiento si es necesario */
+}
+
+/* Contenido del Modal */
+.modal-contenido {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: 10% auto; /* Centrar vertical y horizontal */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s;
+}
+
+/* Botón para cerrar el modal */
+.cerrar {
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Input dentro del modal */
+.input-search {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--color3);
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 600px) {
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    video {
+        width: 90%;
+    }
+
+    .modal-contenido {
+        width: 90%;
+        margin-top: 20%;
+    }
+
+    #abrir-modal {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
