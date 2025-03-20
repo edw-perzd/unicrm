@@ -24,7 +24,7 @@
           <a href="{{ route('alumnos.buscar.form') }}" class="nav-link">Buscar alumno</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">Ayuda</a>
+          <a href="{{ route('ayuda') }}" class="nav-link">Ayuda</a>
         </li>
         
         <div class="navbar-actions">

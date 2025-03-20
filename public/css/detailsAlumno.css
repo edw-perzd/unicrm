@@ -1,17 +1,39 @@
-
 /* =========================== */
 /*        Información del alumno        */
 /* =========================== */
 .info-alumno {
     width: 60%;
     text-align: left;
+    font-size: 18px; /* Tamaño aumentado */
 }
 
+/* División en dos columnas */
+.section-container {
+    display: flex;
+    gap: 30px;
+}
+
+/* Títulos */
 .info-alumno h2 {
     color: var(--color-dark1);
+    font-size: 24px; /* Título principal más grande */
 }
 
+.section-title {
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: var(--color-dark2);
+}
 
+/* Lista de detalles */
+.info-alumno ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-alumno li {
+    margin-bottom: 8px;
+}
 
 /* =========================== */
 /*        QR a la derecha        */
@@ -31,3 +53,43 @@
     background: white;
 }
 
+/* Botón de descarga del QR */
+.qr-download-btn {
+    margin-top: 20px; /* Aumenta el espacio entre el QR y el botón */
+    display: block;  /* Asegura que esté debajo del QR */
+    padding: 10px 20px;
+    background-color: var(--color-dark1);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center; /* Centra el texto del botón */
+}
+
+.qr-download-btn:hover {
+    background-color: var(--color-dark2);
+}
+
+
+/* =========================== */
+/*        Diseño Responsivo        */
+/* =========================== */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .info-alumno, .qr-container {
+        width: 100%;
+    }
+
+    .section-container {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    }
+
+    .qr-container {
+        margin-top: 20px;
+    }
+}
