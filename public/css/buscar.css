@@ -16,7 +16,7 @@ p {
 video {
     display: block;
     margin: 20px auto;
-    border: 5px solid var(--color3);
+    border: 5px solid var(--color4);
     border-radius: 10px;
     max-width: 100%; /* Adaptar video a la pantalla */
     height: auto;
@@ -27,12 +27,16 @@ video {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
-    background: var(--color3);
+    background: var(--color4);
     color: white;
     border: none;
     border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
+}
+
+#abrir-modal:hover{
+    background: var(--color5);
 }
 
 /* Estilo del Modal */
@@ -72,7 +76,7 @@ video {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid var(--color3);
+    border: 1px solid var(--color5);
     border-radius: 8px;
     font-size: 16px;
 }

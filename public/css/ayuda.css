@@ -32,7 +32,7 @@
 
 /* Estilo para la pregunta */
 .faq-question {
-    background-color: #007bff;
+    background-color: var();
     color: white;
     padding: 10px 15px;
     cursor: pointer;
@@ -43,7 +43,7 @@
 
 /* Efecto de hover sobre la pregunta */
 .faq-question:hover {
-    background-color: #0056b3;
+    background-color: var(--color5);
 }
 
 /* Estilo para la respuesta */

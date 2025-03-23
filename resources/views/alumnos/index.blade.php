@@ -29,12 +29,16 @@
                     <td>{{$alumno->carrera_alumno}}</td>
                     <td>
                         <a href="{{ route('alumnos.show', $alumno->matricula_alumno) }}" class="btn-ver">Ver</a>
-                        <a href="{{ route('alumnos.edit', $alumno->matricula_alumno) }}" class="btn-editar">Editar</a>  
-                        <form action="{{ route('alumnos.destroy', $alumno->matricula_alumno) }}" method="POST" class="form-eliminar">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn-eliminar">Eliminar</button>
-                        </form>
+                        @can('admin.alumnos.edit')
+                            <a href="{{ route('alumnos.edit', $alumno->matricula_alumno) }}" class="btn-editar">Editar</a>  
+                        @endcan
+                        @can('admin.alumnos.destroy')
+                            <form action="{{ route('alumnos.destroy', $alumno->matricula_alumno) }}" method="POST" class="form-eliminar">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn-eliminar">Eliminar</button>
+                            </form>
+                        @endcan
                     </td>
                 </tr>
             @endforeach

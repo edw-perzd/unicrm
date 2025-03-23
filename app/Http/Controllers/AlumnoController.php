@@ -32,7 +32,7 @@ class AlumnoController extends Controller
             'enfermedades' => 'nullable|min:10|max:100',
             'medicamentos' => 'nullable|min:10|max:100',
             'alergias' => 'nullable|min:10|max:100',
-            'tipoSangre' => 'nullable|min:10|max:11',
+            'tipoSangre' => 'required|min:10|max:11',
             'retricMed' => 'nullable|min:10|max:100',
             'contactoMed' => 'nullable|min:10|max:100',
         ]);
@@ -95,20 +95,20 @@ class AlumnoController extends Controller
     public function update(Request $request, $matricula){
         $request->validate([
             'matricula' => "required|min:10|max:20|unique:alumnos,matricula_alumno,{$matricula},matricula_alumno",
-            'nombre' => 'required|min:10|max:50',
-            'direccion' => 'required|min:10|max:100',
+            'nombre' => 'required|min:3|max:50',
+            'direccion' => 'required|min:3|max:100',
             'telefono1' => 'required|numeric|digits:10',
             'telefono2' => 'nullable|numeric|digits:10',
             'correo' => "nullable|email|unique:alumnos,correoE_alumno,{$matricula},matricula_alumno",
             'fNacimiento' => 'required|date',
-            'carrera' => 'required|min:3|max:50',
+            'carrera' => 'required|min:2|max:50',
             'semestre' => 'required|numeric',
-            'enfermedades' => 'nullable|min:10|max:100',
-            'medicamentos' => 'nullable|min:10|max:100',
-            'alergias' => 'nullable|min:10|max:100',
-            'tipoSangre' => 'nullable|min:10|max:11',
-            'retricMed' => 'nullable|min:10|max:100',
-            'contactoMed' => 'nullable|min:10|max:100',
+            'enfermedades' => 'nullable|min:1|max:100',
+            'medicamentos' => 'nullable|min:1|max:100',
+            'alergias' => 'nullable|min:1|max:100',
+            'tipoSangre' => 'nullable|min:1|max:11',
+            'retricMed' => 'nullable|min:1|max:100',
+            'contactoMed' => 'nullable|numeric|digits:10',
         ]);
         $alumno = Alumno::where('matricula_alumno', $matricula)->first();
 

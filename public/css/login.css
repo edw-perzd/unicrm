@@ -30,7 +30,7 @@
     width: 100vmin;
     height: 100vmin;
     border-radius: 47% 53% 61% 39% / 45% 51% 49% 55%;
-    background: #65c8ff;
+    background: var(--color2);
   }
   
   .background-form::after {
@@ -41,7 +41,7 @@
     width: inherit;
     height: inherit;
     border-radius: inherit;
-    background: #143d81;
+    background: var(--color5);
   }
   
   .card-form {
@@ -66,7 +66,7 @@
     width: 1000px;
     height: 1000px;
     border-radius: 50%;
-    background: #216ce7;
+    background: var(--color5);
   }
   
   @media (width >= 500px) {
@@ -120,7 +120,7 @@
   .form > input[type="submit"] {
     border: 0;
     color: #f9f9f9;
-    background: #226ce7;
+    background: var(--color4);
     display: grid;
     place-items: center;
     font-weight: 500;
@@ -128,7 +128,7 @@
   }
   
   .form > input[type="submit"]:hover{
-    background: #4886ea;
+    background: var(--color5);
   }
   
   .card-form > footer {
@@ -136,7 +136,7 @@
   }
   
   .card-form > footer > a {
-    color: #216ce7;
+    color: var(--color4);
   }
 
   .error-message{

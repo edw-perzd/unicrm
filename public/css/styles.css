@@ -2,16 +2,14 @@
 /*        Definición de colores        */
 /* =========================== */
 :root {
-    --color1: #7374e4;
-    --color2: #5d64d1;
-    --color3: #4754bf;
-    --color4: #3144ac;
-    --color5: #1b3499;
+    --color1: #FFF2FF;
+    --color2: #D4C2F5;
+    --color3: #AA92EA;
+    --color4: #7F62E0;
+    --color5: #5432D6;
     --color-dark1: #3803c4;
-    --color-dark2: #2a02b2;
-    --color-dark3: #1c029f;
-    --color-dark4: #0e018d;
-    --color-dark5: #00007a;
+    --color-dark2: #0e018d;
+    --color-dark3: #00007a;
 }
 
 /* =========================== */
@@ -19,8 +17,8 @@
 /* =========================== */
 body {
     font-family: Arial, sans-serif;
-    background: #f0e6ff; 
-    color: #333;
+    background: rgb(244, 244, 244); 
+    color: black;
     margin: 0;
     padding: 20px;
 }
@@ -34,7 +32,8 @@ body {
     align-items: flex-start;
     max-width: 90%;
     margin: 0 auto;
-    background: white;
+    /* background: white; */
+    background: var(--color1);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -46,14 +45,17 @@ body {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background: var(--color-dark2);
-    color: white;
+    /* background: var(--color-dark2); */
+    background: var(--color5);
+    /* color: white; */
+    color: var(--color1);
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
 }
 .btn-azul:hover {
-    background: var(--color-dark4);
+    /* background: var(--color-dark4); */
+    background: var(--color4);
 }
 
 /* =========================== */
@@ -62,7 +64,8 @@ body {
 #mensaje {
     text-align: center;
     font-weight: bold;
-    color: var(--color-dark2);
+    /* color: var(--color-dark2); */
+    color: var(--color5);
 }
 
 .form-search {
@@ -79,8 +82,10 @@ body {
 }
 
 .input-search[type="submit"] {
-    background: var(--color-dark2);
-    color: white;
+    /* background: var(--color-dark2); */
+    background: var(--color5);
+    /* color: white; */
+    color: var(--color1);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -89,7 +94,8 @@ body {
 }
 
 .input-search[type="submit"]:hover {
-    background: var(--color-dark4);
+    /* background: var(--color-dark4); */
+    background: var(--color4);
 }
 
 /* =========================== */
@@ -105,24 +111,19 @@ body {
 }
 
 .table th, .table td {
-    border: 1px solid var(--color3);
+    border: 1px solid white;
     padding: 10px;
     text-align: left;
 }
 
 .table th {
-    background: var(--color2);
-    color: white;
-}
-
-.table tbody tr:nth-child(even) {
-    background: var(--color1);
-}
-
-.table tbody tr:hover {
     background: var(--color4);
     color: white;
 }
+
+/* .table tbody tr:hover {
+    background: var(--color1);
+} */
 
 /* =========================== */
 /*        Botones        */
@@ -137,12 +138,14 @@ body {
 }
 
 .btn-ver {
-    background: var(--color2);
+    background: var(--color4);
+    /* color: white; */
     color: white;
 }
 
 .btn-editar {
-    background: var(--color3);
+    background: var(--color4);
+    /* color: white; */
     color: white;
 }
 
@@ -198,7 +201,7 @@ body {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     position: relative;
-    color: white; /* Texto en color blanco */
+    color:black; /* Texto en color blanco */
 }
 
 .cerrar {
@@ -207,7 +210,7 @@ body {
     right: 15px;
     font-size: 24px;
     cursor: pointer;
-    color: white;
+    color: var(--color4);
 }
 
 .cerrar:hover {
@@ -219,7 +222,8 @@ body {
     width: 95%;
     padding: 12px;
     margin-top: 10px;
-    border: 1px solid var(--color-dark3);
+    /* border: 1px solid var(--color-dark3); */
+    border: 1px solid var(--color5);
     border-radius: 5px;
     font-size: 16px;
     background-color: white;
@@ -231,7 +235,8 @@ body {
     margin-top: 15px;
     padding: 12px 18px;
     border: none;
-    background-color: var(--color-dark2);
+    /* background-color: var(--color-dark2); */
+    background-color: var(--color4);
     color: white;
     font-size: 16px;
     border-radius: 5px;
@@ -240,7 +245,8 @@ body {
 }
 
 .modal-contenido input[type="submit"]:hover {
-    background-color: var(--color-dark3);
+    /* background-color: var(--color-dark3); */
+    background-color: var(--color5);
 }
 
 /* Estilos para el botón de abrir el modal */
@@ -249,7 +255,8 @@ body {
     margin: 20px auto;
     padding: 12px 24px;
     font-size: 16px;
-    color: white;
+    /* color: white; */
+    color: var(--color1);
     background-color: var(--color3);
     border: none;
     border-radius: 5px;

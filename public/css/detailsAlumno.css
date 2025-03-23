@@ -15,14 +15,14 @@
 
 /* Títulos */
 .info-alumno h2 {
-    color: var(--color-dark1);
+    color: var(--color-dark2);
     font-size: 24px; /* Título principal más grande */
 }
 
 .section-title {
     margin-bottom: 10px;
     font-size: 22px;
-    color: var(--color-dark2);
+    color: var(--color5);
 }
 
 /* Lista de detalles */
@@ -41,14 +41,14 @@
 .qr-container {
     width: 35%;
     text-align: center;
-    background: var(--color3);
+    /* background: var(--color1); */
     padding: 15px;
     border-radius: 10px;
 }
 
 .qr-container img {
     width: 200px;
-    border: 5px solid var(--color-dark3);
+    border: 5px solid var(--color4);
     border-radius: 10px;
     background: white;
 }
@@ -58,7 +58,7 @@
     margin-top: 20px; /* Aumenta el espacio entre el QR y el botón */
     display: block;  /* Asegura que esté debajo del QR */
     padding: 10px 20px;
-    background-color: var(--color-dark1);
+    background-color: var(--color4);
     color: white;
     border: none;
     border-radius: 8px;
@@ -69,7 +69,7 @@
 }
 
 .qr-download-btn:hover {
-    background-color: var(--color-dark2);
+    background-color: var(--color5);
 }
 
 

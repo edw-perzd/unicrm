@@ -1,0 +1,95 @@
+.hero {
+    background: var(--color5);
+    color: var(--color1);
+    text-align: center;
+    padding: 150px 20px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.button-3d {
+    background-color: var(--color5);
+    color: var(--color1);
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.button-3d:hover{
+    background-color: var(--color5);
+}
+
+.contact {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .plan-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.divider {
+    border: none;
+    border-top: 2px solid var(--color1);
+    margin: 40px 0;
+    width: 80%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: border-color 0.5s ease;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    transition: background-color 0.5s ease;
+}
+
+.feature-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+                                       
+            

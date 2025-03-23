@@ -21,9 +21,9 @@ Route::post('/alumnos/buscar/', [AlumnoController::class, 'submit'])->name('alum
 
 Route::get('/alumnos/buscar/{matricula}', [AlumnoController::class, 'show'])->name('alumnos.show');
 
-Route::get('/alumnos/crear/', [AlumnoController::class, 'create'])->name('alumnos.create');
-Route::post('/alumnos/crear/', [AlumnoController::class, 'store'])->name('alumnos.store');
-Route::get('/alumnos/{matricula}/editar', [AlumnoController::class, 'edit'])->name('alumnos.edit');
-Route::put('/alumnos/{matricula}', [AlumnoController::class, 'update'])->name('alumnos.update');
+Route::get('/alumnos/crear/', [AlumnoController::class, 'create'])->middleware(['auth', 'verified', 'can:admin.alumnos.create'])->name('alumnos.create');
+Route::post('/alumnos/crear/', [AlumnoController::class, 'store'])->middleware(['auth', 'verified', 'can:admin.alumnos.create'])->name('alumnos.store');
+Route::get('/alumnos/{matricula}/editar', [AlumnoController::class, 'edit'])->middleware(['auth', 'verified', 'can:admin.alumnos.edit'])->name('alumnos.edit');
+Route::put('/alumnos/{matricula}', [AlumnoController::class, 'update'])->middleware(['auth', 'verified', 'can:admin.alumnos.edit'])->name('alumnos.update');
 
-Route::delete('/alumnos/{matricula}', [AlumnoController::class, 'destroy'])->name('alumnos.destroy');
+Route::delete('/alumnos/{matricula}', [AlumnoController::class, 'destroy'])->middleware(['auth', 'verified', 'can:admin.alumnos.destroy'])->name('alumnos.destroy');
