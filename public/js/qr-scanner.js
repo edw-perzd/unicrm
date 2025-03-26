@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (code) {
                     const qrID = code.data; // Extraemos el ID del QR
                     mensaje.innerText = "Código detectado: " + qrID;
-                    window.location.href = redirectUrl.replace("PLACEHOLDER", encodeURIComponent(qrID));
+                    window.location.href = qrID;
                 }
             }
             requestAnimationFrame(captureFrame);

@@ -15,11 +15,8 @@
     <p id="mensaje">Escaneando...</p>
 
     <script src="https://cdn.jsdelivr.net/npm/jsqr@latest/dist/jsQR.js"></script>
-    <script>
-        const redirectUrl = "{{ route('alumnos.show', 'PLACEHOLDER') }}";
-    </script>
 
-    <p>Ingresando la matrícula</p>
+    <p>Coloca el QR</p>
     <button id="abrir-modal" >Ingresar matrícula</button> 
 
     {{-- Modal para ingresar matrícula --}}

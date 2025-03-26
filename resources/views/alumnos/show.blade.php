@@ -46,17 +46,34 @@
 
     <!-- Código QR -->
     <div class="qr-container">
-        <h3>Generar Código QR:</h3>
+        <h3>Código QR generado:</h3>
         
         @php
-            $qr_url = "https://api.qrserver.com/v1/create-qr-code/?data=" . urlencode($alumno->matricula_alumno) . "&size=200x200";
+            // Generar el QR para la matrícula
+            // $qr_url_matricula = "https://api.qrserver.com/v1/create-qr-code/?data=" . urlencode($alumno->matricula_alumno) . "&size=200x200";
+            
+            // Generar la URL completa para el alumno (incluyendo la matrícula)
+            $full_url = url('alumnos/buscar/' . $alumno->matricula_alumno);
+            
+            // Generar el QR para la matrícula
+            $qr_url_dominio = "https://api.qrserver.com/v1/create-qr-code/?data=" . urlencode($full_url) . "&size=200x200";
         @endphp
 
-        <img src="{{ $qr_url }}" alt="QR Code">
+        <!-- Mostrar el QR para la matrícula -->
+        {{-- <img src="{{ $qr_url_matricula }}" alt="QR Code Matrícula para el sitio">
+        <p>QR de Matrícula</p> --}}
 
-        <!-- Botón de descarga del QR -->
-        <a href="{{ $qr_url }}" download="QR_Alumno_{{$alumno->matricula_alumno}}.png" class="qr-download-btn">
-            Descargar QR
+        <!-- Botón de descarga del QR para matrícula -->
+        {{-- <a href="{{ $qr_url_matricula }}" download="QR_Alumno_{{$alumno->matricula_alumno}}.png" class="qr-download-btn">
+            Descargar QR de Matrícula
+        </a> --}}
+
+        <!-- Mostrar el QR para el dominio con la ruta completa -->
+        <img src="{{ $qr_url_dominio }}" alt="QR Code Web externo">
+
+        <!-- Botón de descarga del QR para el dominio con la ruta -->
+        <a href="{{ $qr_url_dominio }}" download="QR_Dominio_{{ $alumno->matricula_alumno }}.png" class="qr-download-btn">
+            Descargar código QR
         </a>
     </div>
 </div>
