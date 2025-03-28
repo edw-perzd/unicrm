@@ -21,23 +21,27 @@ class AlumnoController extends Controller
     public function store(Request $request){
         $request->validate([
             'matricula' => 'required|min:10|max:20|unique:alumnos,matricula_alumno',
-            'nombre' => 'required|min:10|max:50',
+            'nombre' => 'required|min:6|max:50',
             'direccion' => 'required|min:10|max:100',
             'telefono1' => 'required|numeric|digits:10',
             'telefono2' => 'nullable|numeric|digits:10',
-            'correo' => 'nullable|email|unique:alumnos,correoE_alumno',
+            'correo' => 'required|email|unique:alumnos,correoE_alumno',
             'fNacimiento' => 'required|date',
-            'carrera' => 'required|min:3|max:50',
-            'semestre' => 'required|numeric',
+            'carrera' => 'required|min:3|max:200',
+            'periodo' => 'required|min:5|max:20',
+            'edificio' => 'required|min:1|max:5',
+            'grupo' => 'required|min:1|max:5',
+            'ultRevision' => 'required|date',
             'enfermedades' => 'nullable|min:10|max:100',
             'medicamentos' => 'nullable|min:10|max:100',
             'alergias' => 'nullable|min:10|max:100',
-            'tipoSangre' => 'required|min:10|max:11',
+            'tipoSangre' => 'required|min:5|max:15',
             'retricMed' => 'nullable|min:10|max:100',
-            'contactoMed' => 'nullable|min:10|max:100',
+            'contactoMed' => 'required|numeric|digits:10',
         ]);
 
         $alumno = new Alumno();
+        $alumno->estado_alumno = $request->has('estado') ? 1 : 0;
         $alumno->matricula_alumno = $request->matricula;
         $alumno->nombre_alumno = $request->nombre;
         $alumno->direccion_alumno = $request->direccion;
@@ -46,13 +50,20 @@ class AlumnoController extends Controller
         $alumno->correoE_alumno = $request->correo;
         $alumno->fNacimiento_alumno = $request->fNacimiento;
         $alumno->carrera_alumno = $request->carrera;
-        $alumno->semestre_alumno = $request->semestre;
+        $alumno->periodo_alumno = $request->periodo;
+        $alumno->edificio_alumno = $request->edificio;
+        $alumno->grupo_alumno = $request->grupo;
+        $alumno->ultRevision_alumno = $request->ultRevision;
+        $alumno->antecedentes_alumno = $request->antecedentes;
         $alumno->enfermedades_alumno = $request->enfermedades;
+        $alumno->intervencionesQ_alumno = $request->intervencionesQ;
         $alumno->medicamentos_alumno = $request->medicamentos;
         $alumno->alergias_alumno = $request->alergias;
+        $alumno->antecedentesF_alumno = $request->antecedentesF;
         $alumno->tipoSangre_alumno = $request->tipoSangre;
         $alumno->restricMed_alumno = $request->restricMed;
         $alumno->contactoMed_alumno = $request->contactoMed;
+        $alumno->observaciones_alumno = $request->observaciones;
 
 
         $alumno->save();

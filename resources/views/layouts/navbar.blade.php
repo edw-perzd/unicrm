@@ -17,9 +17,11 @@
       </div>
 
       <ul class="navbar-menu">
-        <li class="nav-item">
-          <a href="{{ route('alumnos.index') }}" class="btn-navbar nav-link {{ request()->routeIs(['alumnos.index', 'alumnos.edit']) ? 'active' : ''}}">Sistema de Control de Alumnos</a>
-        </li>
+        @can('admin.alumnos.index')
+          <li class="nav-item">
+            <a href="{{ route('alumnos.index') }}" class="btn-navbar nav-link {{ request()->routeIs(['alumnos.index', 'alumnos.edit']) ? 'active' : ''}}">Lista de alumnos</a>
+          </li>
+        @endcan
         <li class="nav-item">
           <a href="{{ route('alumnos.buscar.form') }}" class="btn-navbar nav-link {{ request()->routeIs('alumnos.buscar.form') ? 'active' : ''}}">Buscar alumno</a>
         </li>

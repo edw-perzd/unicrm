@@ -17,6 +17,7 @@
             <div class="section">
                 <h3 class="section-title">Datos Personales</h3>
                 <ul>
+                    <li><strong>Estado:</strong> <span style="{{ $alumno->estado_alumno==1? 'color: green': 'color: red' }}">{{$alumno->estado_alumno==1? 'Activo': 'Baja'}}</span></li>
                     <li><strong>Matrícula:</strong> {{$alumno->matricula_alumno}}</li>
                     <li><strong>Nombre:</strong> {{$alumno->nombre_alumno}}</li>
                     <li><strong>Dirección:</strong> {{$alumno->direccion_alumno}}</li>
@@ -25,7 +26,10 @@
                     <li><strong>Correo electrónico:</strong> <span style="{{ $alumno->correoE_alumno? '' : 'color: gray; font-style: italic'}}">{{$alumno->correoE_alumno? $alumno->correoE_alumno: 'Sin registro'}}</span></li>
                     <li><strong>Fecha de nacimiento:</strong> {{$alumno->fNacimiento_alumno}}</li>
                     <li><strong>Carrera:</strong> {{$alumno->carrera_alumno}}</li>
-                    <li><strong>Semestre:</strong> {{$alumno->semestre_alumno}}</li>
+                    <li><strong>Periodo:</strong> {{$alumno->periodo_alumno}}</li>
+                    <li><strong>Edificio:</strong> {{$alumno->edificio_alumno}}</li>
+                    <li><strong>Grupo:</strong> {{$alumno->grupo_alumno}}</li>
+                    <li><strong>Tipo de sangre:</strong> {{$alumno->tipoSangre_alumno}}</li>
                 </ul>
             </div>
 
@@ -33,12 +37,16 @@
             <div class="section">
                 <h3 class="section-title">Datos Médicos</h3>
                 <ul>
-                    <li><strong>Enfermedades:</strong> <span style="{{ $alumno->enfermedades_alumno? '' : 'color: gray; font-style: italic'}}">{{$alumno->enfermedades_alumno? $alumno->enfermedades_alumno : 'Ninguna'}}</span></li>
-                    <li><strong>Medicamentos:</strong> <span style="{{ $alumno->medicamentos_alumno? '' : 'color: gray; font-style: italic'}}">{{$alumno->medicamentos_alumno? $alumno->medicamentos_alumno : 'Ninguno'}}</span></li>
-                    <li><strong>Alergias:</strong> <span style="{{ $alumno->alergias_alumno? '' : 'color: gray; font-style: italic' }}">{{$alumno->alergias_alumno? $alumno->alergias_alumno: 'Ninguna'}}</span></li>
-                    <li><strong>Tipo de sangre:</strong> {{$alumno->tipoSangre_alumno}}</li>
-                    <li><strong>Restricciones médicas:</strong> <span style="{{ $alumno->restricMed_alumno? '' : 'color: gray; font-style: italic'}}">{{$alumno->restricMed_alumno? $alumno->restricMed_alumno: 'Ninguna'}}</span></li>
+                    <li><strong>Última revisión médica:</strong> {{$alumno->ultRevision_alumno}}</li>
+                    <li><strong>Antecedentes relevantes:</strong> <span style="{{ $alumno->antecedentes_alumno? '' : 'color: gray; font-style: italic'}}">{{$alumno->antecedentes_alumno? $alumno->antecedentes_alumno: 'NA'}}</span></li>
+                    <li><strong>Enfermedades crónicas:</strong> <span style="{{ $alumno->enfermedades_alumno? '' : 'color: gray; font-style: italic'}}">{{$alumno->enfermedades_alumno? $alumno->enfermedades_alumno : 'NA'}}</span></li>
+                    <li><strong>Intervenciones quirúrgicas:</strong> <span style="{{ $alumno->intervencionesQ_alumno? '' : 'color: gray; font-style: italic'}}">{{$alumno->intervencionesQ_alumno? $alumno->intervencionesQ_alumno : 'NA'}}</span></li>
+                    <li><strong>Tratamientos y medicamentos:</strong> <span style="{{ $alumno->medicamentos_alumno? '' : 'color: gray; font-style: italic'}}">{{$alumno->medicamentos_alumno? $alumno->medicamentos_alumno : 'NA'}}</span></li>
+                    <li><strong>Alergias:</strong> <span style="{{ $alumno->alergias_alumno? '' : 'color: gray; font-style: italic' }}">{{$alumno->alergias_alumno? $alumno->alergias_alumno: 'NA'}}</span></li>
+                    <li><strong>Antecedentes familiares:</strong> <span style="{{ $alumno->antecedentesF_alumno? '' : 'color: gray; font-style: italic' }}">{{$alumno->antecedentesF_alumno? $alumno->antecedentesF_alumno: 'NA'}}</span></li>
+                    <li><strong>Restricciones médicas:</strong> <span style="{{ $alumno->restricMed_alumno? '' : 'color: gray; font-style: italic'}}">{{$alumno->restricMed_alumno? $alumno->restricMed_alumno: 'NA'}}</span></li>
                     <li><strong>Contacto de emergencia:</strong> {{$alumno->contactoMed_alumno}}</li>
+                    <li><strong>Observaciones:</strong> <span style="{{ $alumno->observaciones_alumno? '' : 'color: gray; font-style: italic'}}">{{$alumno->observaciones_alumno? $alumno->observaciones_alumno: 'NA'}}</span></li>
                 </ul>
             </div>
         </div>

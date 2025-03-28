@@ -14,7 +14,7 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('/ayuda', function () {return view('alumnos.ayuda');})->name('ayuda');
 
-Route::get('/alumnos', [AlumnoController::class, 'index'])->name('alumnos.index');
+Route::get('/alumnos', [AlumnoController::class, 'index'])->middleware(['auth', 'verified', 'can:admin.alumnos.index'])->name('alumnos.index');
 
 Route::get('/alumnos/buscar/', [AlumnoController::class, 'buscar'])->name('alumnos.buscar.form');
 Route::post('/alumnos/buscar/', [AlumnoController::class, 'submit'])->name('alumnos.buscar.submit');
